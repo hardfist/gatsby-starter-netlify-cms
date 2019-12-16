@@ -5,7 +5,10 @@ module.exports.handler = async function(event, context) {
     // return null to show no errors
     statusCode: 200, // http status code
     body: JSON.stringify({
-      msg: "YJ Hello, World! This is better " + Math.round(Math.random() * 10)
+      msg:
+        "YJ Hello, World! This is better " +
+        process.env.NAME +
+        Math.round(Math.random() * 10)
     })
   };
 };
